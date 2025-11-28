@@ -1,0 +1,49 @@
+portfolio/
+│── public/                     # Static files (favicon, resume.pdf, images that don’t change)
+│   ├── favicon.ico
+│   ├── robots.txt
+│   └── assets/                  # Static images (logos, profile photo)
+│
+│── src/
+│   ├── assets/                  # Optimized images, svgs, icons
+│   ├── components/              # Reusable UI components
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Button.jsx
+│   │   └── Card.jsx
+│   │
+│   ├── sections/                # Page sections (for modular portfolio structure)
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Contact.jsx
+│   │   └── Resume.jsx
+│   │
+│   ├── pages/                   # For routing (if needed, e.g., Resume, Blog, etc.)
+│   │   ├── Home.jsx
+│   │   └── NotFound.jsx
+│   │
+│   ├── hooks/                   # Custom hooks (e.g., useTheme, useScroll)
+│   │
+│   ├── context/                 # Global state (e.g., ThemeContext.jsx)
+│   │
+│   ├── data/                    # Centralized JSON/JS data (projects, skills, experiences)
+│   │   ├── projects.js
+│   │   ├── skills.js
+│   │   └── socialLinks.js
+│   │
+│   ├── styles/                  # Tailwind + custom CSS
+│   │   ├── globals.css          # Import Tailwind base, components, utilities
+│   │   └── animations.css
+│   │
+│   ├── utils/                   # Helper functions (formatDate, scrollToSection, etc.)
+│   │
+│   ├── App.jsx
+│   ├── main.jsx                 # Entry point
+│   └── index.css
+│
+│── tailwind.config.js
+│── postcss.config.js
+│── package.json
+│── README.md

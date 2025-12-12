@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home, User, Briefcase, FileText } from 'lucide-react';  
 import Particles from '../ui/Particles.jsx';
-import { NavBar } from '../Components/Navbar';
+import { NavBar } from '../Components/NavBar.jsx';
 import LogoLoop from "../ui/LogoLoop";
 import { HoverBorderGradient } from '../ui/HoverBorderGradient';
 import ProjectCard from '../Components/ProjectCard';

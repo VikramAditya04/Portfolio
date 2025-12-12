@@ -1,12 +1,12 @@
-import Particles from './Components/Particles'
-import PortfolioLanding from './Components/PortfolioLanding'
+import React from 'react'
+import Home from './pages/HomePage.jsx'
 import './App.css'
 
 function App() {
 
   return (
   <>
-    <PortfolioLanding />
+    <Home />
   </>
   )
 }

@@ -1,1 +1,9 @@
 @import "tailwindcss";
+.scroll-stack-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-stack-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}

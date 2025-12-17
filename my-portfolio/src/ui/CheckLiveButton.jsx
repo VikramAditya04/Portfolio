@@ -4,7 +4,6 @@ const CheckLiveButton = () => {
   return (
     <button
       className="
-        group                              
         relative
         h-[45px]
         rounded-full
@@ -38,55 +37,17 @@ const CheckLiveButton = () => {
           px-4
         "
       >
-        {/* ICON WRAPPER */}
-        <span
-          className="
-            relative w-[18px] h-[18px]
-            transition-transform duration-500
-            group-hover:scale-105           /* ✅ SCALE WORKS */
-          "
-        >
-          {/* ↗ DEFAULT ARROW */}
+        {/* ICON */}
+        <span className="relative w-[18px] h-[18px]">
           <svg
-            className="
-              absolute inset-0
-              opacity-100
-              group-hover:opacity-0
-              group-hover:-translate-y-1
-              group-hover:translate-x-1
-              transition-all duration-500
-            "
             width={18}
             height={18}
             viewBox="0 0 24 24"
             fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               d="M7 17L17 7M17 7H9M17 7V15"
-              stroke="url(#grad)"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-
-          {/* → RIGHT ARROW */}
-          <svg
-            className="
-              absolute inset-0
-              opacity-0
-              -translate-x-1
-              group-hover:opacity-100
-              group-hover:translate-x-0
-              transition-all duration-500
-            "
-            width={18}
-            height={18}
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M5 12H19M19 12L13 6M19 12L13 18"
               stroke="url(#grad)"
               strokeWidth={2}
               strokeLinecap="round"

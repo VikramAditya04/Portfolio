@@ -48,12 +48,12 @@ export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "
       )}
     >
       {/* This wrapper is CLICKABLE */}
-      <div className="flex items-center justify-between gap-4 pointer-events-auto">
+      <div className="flex items-center md:justify-between justify-center gap-4 pointer-events-auto w-full">
         
         {/* Logo */}
         <a 
           href="#hero" 
-          className="invisible md:visible items-center justify-center w-10 h-10 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-lg overflow-hidden cursor-pointer"
+          className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-lg overflow-hidden cursor-pointer"
         >
           {logoUrl ? (
             <img 
@@ -112,7 +112,7 @@ export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "
         </div>
 
         {/* Resume Button */}
-        <a href={resumeUrl} className="invisible md:visible cursor-pointer">
+        <a href={resumeUrl} className="hidden md:flex items-center justify-center cursor-pointer">
           <HoverBorderGradient
             as="button"
             containerClassName="rounded-full cursor-pointer"

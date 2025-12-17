@@ -7,20 +7,20 @@ import Hero from '../Components/Hero';
 import Skills from '../Components/Skills';
 import ProjectCard from '../Components/ProjectCard';
 import { projects } from "../Components/ProjectData";
-import '../Components/About.jsx';
+import About from '../Components/About';
 
 
 // Function to calculate sticky top position based on index and screen size
 const getStickyTop = (index) => {
   if (window.innerWidth < 640) {
     // Mobile
-    return 5 + index * 5;
+    return 0 + index * 5;
   } else if (window.innerWidth < 1024) {
     // Tablet
-    return 50 + index * 10;
+    return 75 + index * 10;
   } else {
     // Desktop
-    return 130 + index * 10;
+    return 150 + index * 10;
   }
 };
 
@@ -67,9 +67,13 @@ export default function HomePage() {
         
     </div>
 </section> 
+<div>
+
+
       {/* Project Section Scroll Stack */}
+      
 <section id='projects'
-  className="project-section bg-gradient-to-b from-[black] via-[#010617] to-[#0f172a] px-4"
+  className="project-section  bg-gradient-to-b from-[black] via-[#010617] to-[black] px-4"
 >
   <div className="max-w-6xl mx-auto text-center pt-32 pb-8">
     <div className="flex items-center justify-center gap-3 mb-6">
@@ -88,8 +92,7 @@ export default function HomePage() {
   </div>
 
   {/* Important: keep this wrapper WITHOUT overflow-hidden so page can scroll */}
-  <div className="relative flex flex-col h-[20rem] max-w-5xl mx-auto gap-6 mt-12"
-     style={{ height: `${projects.length * 700}px` }}>
+  <div className="relative flex flex-col h-full max-w-5xl mx-auto gap-6 mt-12">
   
   {projects.map((project, index) => (
     <div 
@@ -106,9 +109,10 @@ export default function HomePage() {
 </div>
 </section>
       {/* About Section with Sticky Scroll Reveal */}   
-    {/* <section id="about" className="bg-[#0f172a] py-20 px-4">  
+    <section id="about" className="bg-black py-20 px-4">  
       <About />
-    </section>   */}
+    </section>  
+    </div>
     </>
   );
 }

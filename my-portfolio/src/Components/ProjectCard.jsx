@@ -34,7 +34,7 @@ const ProjectCard = ({
           <div className={`relative height-full
               bg-gradient-to-br ${gradientFrom} ${gradientVia} ${gradientTo} 
               backdrop-blur-3xl 
-              border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] 
+              border-[0.5px] border-white/40 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]
               rounded-4xl 
               px-5 py-8
               sm:px-8 sm:py-10
@@ -128,10 +128,10 @@ const ProjectCard = ({
                   {/* Premium glass frame */}
                   <div className="relative">
                     {/* Outer glass layer */}
-                    <div className="absolute -inset-[3px] bg-gradient-to-br from-white/30 via-white/10 to-white/5 rounded-[32px] backdrop-blur-xl"></div>
+                    {/* <div className="absolute -inset-[3px] bg-gradient-to-br from-white/30 via-white/10 to-white/5 rounded-[32px] backdrop-blur-xl"></div> */}
 
                     {/* Inner content */}
-                    <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl rounded-[30px] p-3 border-2 border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+                    <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl rounded-[30px] p-3 border border-white/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
                       <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20">
                         {imageUrl ? (
                           <div className="relative w-full h-full aspect-[5/3] overflow-hidden">

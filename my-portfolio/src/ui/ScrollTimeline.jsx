@@ -6,10 +6,10 @@ import {
   useSpring,
 } from "framer-motion";
 import { cn } from "../lib/utils";
-import { Card, CardContent } from "./card";
+import { Card, CardContent } from "./Card";
 import { Calendar } from "lucide-react";
 
-const LINE_LEFT_CLASS = "left-6"; // ✅ SINGLE SOURCE OF TRUTH
+const LINE_LEFT_CLASS = "left-6"; // SINGLE SOURCE OF TRUTH
 
 const DEFAULT_EVENTS = [
   {

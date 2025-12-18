@@ -34,9 +34,11 @@ const navItems = [
 export default function HomePage() {
   return (
     <> 
-    <section id="hero">
-    <div className="min-h-screen bg-[#010617]
-  bg-[radial-gradient(circle_at_bottom,_rgba(88,28,135,0.85)_0,_rgba(15,23,42,1)_45%,_#020617_80%)] relative overflow-hidden">
+    <main >
+    <section id="hero ">
+    <div className="min-h-screen w-full overflow-hidden bg-[#010617]
+      bg-[radial-gradient(circle_at_bottom,_rgba(88,28,135,0.85)_0,_rgba(15,23,42,1)_45%,_#020617_80%)] relative overflow-x: hidden;">
+
     
       {/* Navbar at top */}
       <NavBar 
@@ -67,13 +69,13 @@ export default function HomePage() {
         
     </div>
 </section> 
-<div>
+
 
 
       {/* Project Section Scroll Stack */}
       
 <section id='projects'
-  className="project-section  bg-gradient-to-b from-[black] via-[#010617] to-[black] px-4"
+  className="project-section  bg-gradient-to-b from-[black] via-[#010617] to-[black] px-4 "
 >
   <div className="max-w-6xl mx-auto text-center pt-32 pb-8">
     <div className="flex items-center justify-center gap-3 mb-6">
@@ -108,11 +110,11 @@ export default function HomePage() {
   ))}
 </div>
 </section>
-      {/* About Section with Sticky Scroll Reveal */}   
+      {/* About Section*/}   
     <section id="about" className="bg-black py-20 px-4">  
       <About />
     </section>  
-    </div>
+    </main>
     </>
   );
 }

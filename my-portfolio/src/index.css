@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 .scroll-stack-container::-webkit-scrollbar {
   display: none;
 }
@@ -7,6 +8,11 @@
   -ms-overflow-style: none;  
   scrollbar-width: none;     
 }
-html {
+
+html, body {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  white-space:initial;
+  overflow-x: clip;
 }

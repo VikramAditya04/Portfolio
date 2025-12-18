@@ -40,7 +40,7 @@ export default function Hero() {
           </a>
 
           {/* Get in touch button */}
-          <a href="https://www.linkedin.com/in/vikramaditya04/" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:vikramaadi9798@gmail.com" target="_blank" rel="noopener noreferrer">
             <HoverBorderGradient
               as="button"
               containerClassName="rounded-full"

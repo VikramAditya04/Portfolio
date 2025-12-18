@@ -18,7 +18,7 @@ const ProjectCard = ({
   githubLink = ''
 }) => {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Animated gradient border with sharp edges */}
       <GlowingCards
         enableGlow={true}

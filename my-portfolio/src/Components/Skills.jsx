@@ -69,7 +69,7 @@ const techLogos = [
 export default function Skills() {
   return (
     <>
-    <div className="h-full relative overflow-hidden z-[50] top-0">
+    <div className="h-full relative  z-[50] top-0">
       {/* Basic horizontal loop */}
       <LogoLoop
         logos={techLogos}

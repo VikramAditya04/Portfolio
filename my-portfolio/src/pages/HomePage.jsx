@@ -35,8 +35,8 @@ export default function HomePage() {
   return (
     <> 
     <main >
-    <section id="hero ">
-    <div className="min-h-screen w-full overflow-hidden bg-[#010617]
+    <section id="hero">
+    <div className="h-screen w-full overflow-hidden bg-[#010617]
       bg-[radial-gradient(circle_at_bottom,_rgba(88,28,135,0.85)_0,_rgba(15,23,42,1)_45%,_#020617_80%)] relative overflow-x: hidden;">
 
     

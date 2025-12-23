@@ -4,10 +4,11 @@ import { Home, User, Briefcase, Mail} from 'lucide-react';
 import Particles from '../ui/Particles.jsx';
 import { NavBar } from '../Components/NavBar.jsx';
 import Hero from '../Components/Hero';
-import Skills from '../Components/Skills';
+import Tools from '../Components/Tools.jsx';
 import ProjectCard from '../Components/ProjectCard';
 import { projects } from "../Components/ProjectData";
 import About from '../Components/About';
+import Skills from '../Components/Skills.jsx';
 
 
 // Function to calculate sticky top position based on index and screen size
@@ -64,8 +65,8 @@ export default function HomePage() {
       {/* Main Hero Content */}
       <Hero />
 
-      {/* Tools marquee - Scrolling logos at the bottom */}
-      <Skills />
+      {/* Tools marquee - Scrolling logos */}
+      <Tools />
         
     </div>
 </section> 
@@ -93,7 +94,6 @@ export default function HomePage() {
     <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-300">A Glimpse Into My Craft</h2>
   </div>
 
-  {/* Important: keep this wrapper WITHOUT overflow-hidden so page can scroll */}
   <div className="relative flex flex-col h-full max-w-5xl mx-auto gap-6 mt-12">
   
   {projects.map((project, index) => (
@@ -110,10 +110,16 @@ export default function HomePage() {
   ))}
 </div>
 </section>
+{/* Skills Section */}
+<section id="skills" className="bg-[black]  px-4"> 
+      <Skills />
+</section> 
+
       {/* About Section*/}   
-    <section id="about" className="bg-black py-20 px-4">  
+    <section id="about" className="bg-black py-20 px-4 ">  
       <About />
-    </section>  
+    </section> 
+ 
     </main>
     </>
   );

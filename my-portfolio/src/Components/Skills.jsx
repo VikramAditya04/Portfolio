@@ -1,102 +1,110 @@
 import React from 'react'
-import LogoLoop from "../ui/LogoLoop";
-import {
-  SiReact,
-  SiTailwindcss,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiVite,
-  SiNodedotjs,
-  SiExpress,
-  SiGithub,
-  SiGit,
-  SiFigma
-} from "react-icons/si";
+import SpotlightCard from '../ui/Cards/SpotlightCard';
+import analysisImg from '../assets/Skills/Business Plan.png';
+import uiuxImg from '../assets/Skills/UI-UX design.png';
+import developmentImg from '../assets/Skills/Development.png';
+import testingImg from '../assets/Skills/Usability testing.png';
 
-const techLogos = [
-  {
-    node: <SiReact className="text-[40px] text-[#61DAFB]" />,
-    label: "React"
-  },
-  {
-    node: <SiHtml5 className="text-[40px] text-[#E34F26]" />, 
-  },
-  {
-    node: <SiCss3 className="text-[40px] text-[#3178C6]" />, 
-    label: "CSS"
-  },
-  {
-    node: <SiJavascript className="text-[40px] text-[#F7DF1E]" />, 
-    label: "JavaScript"
-  },
-  {
-    node: <SiTailwindcss className="text-[40px] text-[#38BDF8]" />, 
-    label: "Tailwind CSS"
-  },
-  {
-    node: <SiVite className="text-[40px] text-[#3178C6]" />, 
-    label: "Vite"
-  },
-  {
-    node: <SiNodedotjs className="text-[40px] text-[#3178C6]" />,
-    label: "Node.js"
-  },
-  {
-    node: <SiExpress className="text-[40px] text-[#FFFFFF]" />, 
-    label: "Express"
-  },
-  {
-    node: <SiGithub className="text-[40px] text-[#FFFFFF]" />, 
-    label: "GitHub"
-  },
-  {
-    node: <SiGit className="text-[40px] text-[#F05032]" />, 
-    label: "Git"
-  },
-  {
-    node: <SiFigma className="text-[40px] text-[#FFFFFF]" />, 
-    label: "Figma"
-  }
-];
-// (you’re not using this yet, so either use it or delete it to avoid warnings)
-// const imageLogos = [
-//   { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
-//   { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
-//   { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
-// ];
-
-export default function Skills() {
+function Skills() {
   return (
-    <>
-    <div className="h-full relative  z-[50] top-0">
-      {/* Basic horizontal loop */}
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
-        direction="left"
-        logoHeight={48}
-        gap={40}
-        hoverSpeed={0}
-        scaleOnHover
-        fadeOut
-        fadeOutColor="#000000"
-        ariaLabel="Technology logos"
-        renderItem={(item) => (
-          <div className="flex flex-col items-center gap-2">
-            {/* Icon */}
-            <span>
-              {item.node}
-            </span>
-            {/* Label below */}
-            <span className="text-xs text-gray-300">
-              {item.label}
-            </span>
-          </div>
-        )}
-      />
+    <>  
+    <div className="max-w-6xl mx-auto text-center pt-32 pb-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
+              </svg> 
+              <span className="text-gray-500 text-sm font-medium tracking-[0.3em] uppercase">SKILLS</span>
+              <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
+              </svg>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-300">Skills & Methodology</h2>
+        </div>
+    <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      
+      {/* Card 1 */}
+      <SpotlightCard
+        className="custom-spotlight-card p-6 rounded-2xl flex flex-col gap-4"
+        spotlightColor="rgba(255, 165, 0, 0.2)"
+      >
+        <img
+          src={analysisImg}
+          alt="User & Business Analysis"
+          className="w-full h-40 object-cover rounded-xl"
+        />
+
+        <h3 className="text-lg font-semibold text-white">
+          User & Business Analysis
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Understand user needs and business goals to define clear requirements,
+          features, and technical direction before development begins.
+        </p>
+      </SpotlightCard>
+
+      {/* Card 2 */}
+      <SpotlightCard
+        className="custom-spotlight-card p-6 rounded-2xl flex flex-col gap-4"
+        spotlightColor="rgba(0, 122, 255, 0.2)"
+      >
+        <img
+          src={uiuxImg}
+          alt="UI/UX Design"
+          className="w-full h-40 object-cover rounded-xl"
+        />
+
+        <h3 className="text-lg font-semibold text-white">
+          UI/UX & Design Systems
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Design intuitive, accessible interfaces and reusable design systems
+          that ensure consistent and engaging user experiences.
+        </p>
+      </SpotlightCard>
+
+      {/* Card 3 */}
+      <SpotlightCard
+        className="custom-spotlight-card p-6 rounded-2xl flex flex-col gap-4"
+        spotlightColor="rgba(234, 179, 8, 0.2)"
+      >
+        <img
+          src={developmentImg}
+          alt="Full Stack Development"
+          className="w-full h-40 object-cover rounded-xl"
+        />
+
+        <h3 className="text-lg font-semibold text-white">
+          Full-Stack Development
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Build scalable and responsive web applications by transforming designs
+          into robust frontend and backend solutions.
+        </p>
+      </SpotlightCard>
+
+      {/* Card 4 */}
+      <SpotlightCard
+        className="custom-spotlight-card p-6 rounded-2xl flex flex-col gap-4"
+        spotlightColor="rgba(34, 197, 94, 0.2)"
+      >
+        <img
+          src={testingImg}
+          alt="Testing & Deployment"
+          className="w-full h-40 object-cover rounded-xl"
+        />
+
+        <h3 className="text-lg font-semibold text-white">
+          Testing & Deployment
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Test with real users, fix issues, deploy confidently, and continuously
+          optimize performance based on feedback.
+        </p>
+      </SpotlightCard>
+
     </div>
     </>
   )
 }
 
+export default Skills;

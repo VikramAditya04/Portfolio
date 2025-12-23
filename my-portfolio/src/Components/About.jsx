@@ -29,9 +29,23 @@ I'm always eager to learn, take on new challenges, and collaborate with other de
 
 export default function About() {
   return (
+    <>  
+  
+    <div className="flex items-center justify-center gap-3 mb-6 mt-12">
+      <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
+      </svg>
+
+      <span className="text-gray-500 text-sm font-medium tracking-[0.3em] uppercase">ABOUT</span>
+
+      <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
+      </svg>
+    </div>
+
     <ScrollTimeline 
       events={events}
-      title="My Journey"
+      title="My Journey so far"
       subtitle="Scroll to explore the timeline"
       aboutTitle="About Me"
       aboutText={AboutmeText[0].paragraph}
@@ -41,5 +55,6 @@ export default function About() {
       revealAnimation="fade"
       darkMode={true}
     />
+    </>
   )
 }

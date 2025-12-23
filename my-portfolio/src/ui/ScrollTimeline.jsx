@@ -82,7 +82,7 @@ const ScrollTimeline = forwardRef((props, outerRef) => {
       )}
     >
       {/* HEADER */}
-      <div className="text-center py-20 px-4">
+      <div className="text-center pb-20 px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-3">
           {title}
         </h2>

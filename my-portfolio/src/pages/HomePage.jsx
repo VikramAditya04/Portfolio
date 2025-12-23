@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/Logo VA.png';
-import { Home, User, Briefcase, Mail} from 'lucide-react';  
+import { Home, User, Briefcase, Mail, Layers} from 'lucide-react';  
 import Particles from '../ui/Particles.jsx';
 import { NavBar } from '../Components/NavBar.jsx';
 import Hero from '../Components/Hero';
@@ -27,8 +27,9 @@ const getStickyTop = (index) => {
 
 const navItems = [
   { name: 'Home', url: '#hero', icon: Home },
-  { name: 'About', url: '#about', icon: User },
   { name: 'Projects', url: '#projects', icon: Briefcase },
+  { name: 'Skills', url: '#skills', icon: Layers},
+  { name: 'About', url: '#about', icon: User },
   { name: 'Contact', url: '#contact', icon: Mail }
 ];
 

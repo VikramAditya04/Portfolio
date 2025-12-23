@@ -48,7 +48,7 @@ export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "
       )}
     >
       {/* This wrapper is CLICKABLE */}
-      <div className="flex items-center md:justify-between justify-center gap-4 pointer-events-auto w-full">
+      <div className="flex items-center md:justify-between justify-center gap-2 pointer-events-auto w-full">
         
         {/* Logo */}
         <a 

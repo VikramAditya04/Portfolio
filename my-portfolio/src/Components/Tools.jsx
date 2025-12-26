@@ -20,7 +20,8 @@ const techLogos = [
     label: "React"
   },
   {
-    node: <SiHtml5 className="text-[40px] text-[#E34F26]" />, 
+    node: <SiHtml5 className="text-[40px] text-[#E34F26]" />,
+    label: "HTML" 
   },
   {
     node: <SiCss3 className="text-[40px] text-[#3178C6]" />, 
@@ -77,7 +78,7 @@ export default function Skills() {
         fadeOutColor="#000000"
         ariaLabel="Technology logos"
         renderItem={(item) => (
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2 hover:cursor-pointer hover:scale-105 transition-transform duration-500">
             {/* Icon */}
             <span>
               {item.node}

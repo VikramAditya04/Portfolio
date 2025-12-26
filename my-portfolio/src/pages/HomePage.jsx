@@ -9,6 +9,7 @@ import ProjectCard from '../Components/ProjectCard';
 import { projects } from "../Components/ProjectData";
 import About from '../Components/About';
 import Skills from '../Components/Skills.jsx';
+import Footer from '../Components/Footer.jsx';
 
 
 // Function to calculate sticky top position based on index and screen size
@@ -48,20 +49,6 @@ export default function HomePage() {
         logoUrl={logo}
         resumeUrl="/path-to-your-resume.pdf"
       />
-
-      {/* Stars background effect - Creates twinkling stars across the page */}
-      <div className="absolute inset-0"> 
-        <Particles
-            particleColors={['#F9F8F6', '#F9F8F6', '#F9F8F6']}
-            particleCount={250}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={50}
-            moveParticlesOnHover={false}
-            alphaParticles={true}
-           disableRotation={false} 
-        />
-      </div>
       
       {/* Main Hero Content */}
       <Hero />
@@ -122,6 +109,9 @@ export default function HomePage() {
     </section> 
  
     </main>
+    <footer id='contact'>
+      <Footer />
+    </footer>
     </>
   );
 }

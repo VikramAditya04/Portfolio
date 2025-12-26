@@ -30,12 +30,36 @@ export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Add scroll effect
+  // Add scroll effect and section tracking
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      
+      // Track which section is in view
+      const sections = items.map(item => {
+        const id = item.url.replace('#', '');
+        return document.getElementById(id);
+      }).filter(Boolean);
+
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.offsetTop <= scrollPosition) {
+          const sectionId = section.id;
+          const matchingItem = items.find(item => item.url === `#${sectionId}`);
+          if (matchingItem && activeTab !== matchingItem.name) {
+            setActiveTab(matchingItem.name);
+          }
+          break;
+        }
+      }
+    };
+
+    handleScroll(); // Initial check
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [items, activeTab]);
 
   return (
     <div

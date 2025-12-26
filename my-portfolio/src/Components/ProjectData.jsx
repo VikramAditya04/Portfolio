@@ -36,7 +36,7 @@ import CampusAid from "../assets/projects/CampusAid.png";
       gradientTo: "to-transparent",
       borderGlow: "#4b0fd7",
       imageUrl: portfolio,
-      liveLink: "https://vikram-aditya-portfolio.vercel.app/",
+      liveLink: "https://vikramaditya.dev/",
       githubLink: "https://github.com/VikramAditya04/Portfolio"
     },
     {

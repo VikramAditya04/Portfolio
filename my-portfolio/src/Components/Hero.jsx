@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       {/* Stars background effect - Creates twinkling stars across the page */}
-            <div className="absolute inset-0 top-0 bottom-0 z-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 top-6 bottom-0 z-0 pointer-events-none overflow-hidden">
 
                         {/* Layer 1 — Light Rays */}
                 <div className="absolute inset-0 z-10">
@@ -20,7 +20,7 @@ export default function Hero() {
                       lightSpread={1}
                       rayLength={1}
                       followMouse={true}
-                      mouseInfluence={0.1}  
+                      mouseInfluence={0.3}  
                       noiseAmount={0}
                       distortion={0}
                       />
@@ -33,7 +33,7 @@ export default function Hero() {
                         minSize={0.2}
                         maxSize={0.8}
                         particleDensity={20}
-                        className="w-[90%] h-full"
+                        className="w-[85%] h-full"
                         particleColor="#FFFFFF"
                       />
                   </div>

@@ -8,6 +8,9 @@ import {
 import { cn } from "../lib/utils";
 import { Card, CardContent } from "./Card";
 import { Calendar } from "lucide-react";
+// import { motion } from "framer-motion";
+import { LettersPullUp } from './../framer/LettersPullUp';
+
 
 const LINE_LEFT_CLASS = "left-6"; // SINGLE SOURCE OF TRUTH
 
@@ -84,9 +87,13 @@ const ScrollTimeline = forwardRef((props, outerRef) => {
       {/* HEADER */}
       <div className="text-center pb-20 px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-3">
-          {title}
+        <LettersPullUp text={title} 
+        aria-hidden="true"/>
         </h2>
-        <p className="text-white/70">{subtitle}</p>
+        <p className="text-white/70">
+          <LettersPullUp text={subtitle} 
+        aria-hidden="true"/>
+        </p>
       </div>
 
       {/* TWO COLUMN LAYOUT */}

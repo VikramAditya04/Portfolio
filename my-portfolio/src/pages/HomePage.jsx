@@ -10,6 +10,7 @@ import { projects } from "../Components/ProjectData";
 import About from '../Components/About';
 import Skills from '../Components/Skills.jsx';
 import Footer from '../Components/Footer.jsx';
+import { LettersPullUp } from './../framer/LettersPullUp';
 
 
 // Function to calculate sticky top position based on index and screen size

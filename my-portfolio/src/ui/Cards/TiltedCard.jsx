@@ -37,6 +37,9 @@ export default function TiltedCard({
 
   const [lastY, setLastY] = useState(0);
 
+  //  mobile color lock
+  const [isMobileColor, setIsMobileColor] = useState(false);
+
   function handleMouse(e) {
     if (!ref.current) return;
 
@@ -71,6 +74,11 @@ export default function TiltedCard({
     rotateFigcaption.set(0);
   }
 
+  // 📱 first tap = turn color ON forever
+  function handleMobileTap() {
+    setIsMobileColor(true);
+  }
+
   return (
     <figure
       ref={ref}
@@ -82,6 +90,8 @@ export default function TiltedCard({
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleMobileTap}   
+      onTouchMove={handleMouse}
     >
       {showMobileWarning && (
         <div className="absolute top-4 text-center text-sm block sm:hidden">
@@ -100,22 +110,25 @@ export default function TiltedCard({
         }}
       >
         <motion.img
-  src={imageSrc}
-  alt={altText}
-  className="
-    absolute top-0 left-0 
-    object-cover rounded-[15px] 
-    will-change-transform [transform:translateZ(0)]
-    filter grayscale          /* start in B/W */
-    hover:grayscale-0         /* turn color on hover */
-    transition-all duration-300
-  "
-  style={{
-    width: imageWidth,
-    height: imageHeight,
-  }}
-/>
+          src={imageSrc}
+          alt={altText}
+          className={`
+            absolute top-0 left-0 
+            object-cover rounded-[15px] 
+            will-change-transform 
+            transition-all duration-300
 
+            ${
+              isMobileColor
+                ? "grayscale-0"
+                : "filter grayscale hover:grayscale-0"
+            }
+          `}
+          style={{
+            width: imageWidth,
+            height: imageHeight
+          }}
+        />
 
         {displayOverlayContent && overlayContent && (
           <motion.div className="absolute top-2 left-2 z-[2] will-change-transform [transform:translateZ(30px)] h-[2rem] w-[2rem] flex items-center justify-center rounded-full bg-black/30">

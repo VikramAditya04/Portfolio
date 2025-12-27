@@ -4,6 +4,7 @@ import analysisImg from '../assets/Skills/Business Plan.png';
 import uiuxImg from '../assets/Skills/UI-UX design.png';
 import developmentImg from '../assets/Skills/Development.png';
 import testingImg from '../assets/Skills/Usability testing.png';
+import { LettersPullUp } from './../framer/LettersPullUp';
 
 function Skills() {
   return (
@@ -18,7 +19,9 @@ function Skills() {
                 <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" />
               </svg>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-300">Skills & Methodology</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-300">
+              <LettersPullUp text="Skills & Methodology" aria-hidden="true" />
+            </h2>
         </div>
     <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
       

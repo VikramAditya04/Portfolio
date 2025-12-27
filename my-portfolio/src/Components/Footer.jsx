@@ -4,14 +4,14 @@ import LightRays from '../ui/LightRays.jsx';
 import { HoverBorderGradient } from '../ui/HoverBorderGradient.jsx';
 import SocialButton from '../ui/Buttons/SocialButton.jsx';
 import TiltedCard from '../ui/Cards/TiltedCard.jsx';
-import vikramImg from '../assets/Vikram.webp';
+import vikramImg from '../assets/Vikram.png';
 import FooterNote from '../ui/FooterNote.jsx';
 import logo from '../assets/Logo VA.png';
 
 function Footer() {
   return (
     <>
-    <footer className="bg-black text-gray-400 py-6 pt-60 relative overflow-hidden">
+    <footer className="bg-black text-gray-400 py-6 pt-40 relative overflow-hidden">
 
       <div
         className="
@@ -115,7 +115,7 @@ function Footer() {
                             lightSpread={1}
                             rayLength={0.5}
                             followMouse={true}
-                            mouseInfluence={0.1}
+                            mouseInfluence={0.2}
                             noiseAmount={0}
                             distortion={0}
                             />

@@ -29,7 +29,7 @@ Installation & Setup
 git clone https://github.com/VikramAditya04/Portfolio/tree/main/my-portfolio
 
 # Navigate to project folder
-cd portfolio
+cd my-portfolio
 
 # Install dependencies
 npm install

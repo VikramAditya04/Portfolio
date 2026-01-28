@@ -93,9 +93,10 @@ function Footer() {
               />
             </div>
         
-        <div className="flex gap-3 justify-center align-center">
+        <div className="flex gap-2 justify-center align-center">
           <SocialButton platform="linkedin" href="https://www.linkedin.com/in/vikramaditya04/" tooltip="LinkedIn" />
           <SocialButton platform="github" href="https://github.com/VikramAditya04" tooltip="GitHub" />
+          <SocialButton platform="leetcode" href="https://leetcode.com/u/Vikram_Aditya_04/" tooltip="LeetCode" />
           <SocialButton platform="instagram" href="https://www.instagram.com/_aadi_04/" tooltip="Instagram" />
           <SocialButton platform="twitter" href="https://x.com/Aadi_04__" tooltip="Twitter" />
           <SocialButton platform="whatsapp" href="https://wa.me/+919798018793?text=Hello Vikram!" tooltip="WhatsApp" />

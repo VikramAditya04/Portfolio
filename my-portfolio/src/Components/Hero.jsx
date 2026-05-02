@@ -4,6 +4,7 @@ import Particles from '../ui/Particles.jsx';
 import { SparklesCore } from '../ui/Sparkles.jsx';
 import LightRays from '../ui/LightRays.jsx';
 import ShinyText from '../ui/ShinyText.jsx';
+import resume from '../assets/Resume/Resume.pdf';
 
 export default function Hero() {
   return (
@@ -83,7 +84,7 @@ export default function Hero() {
         {/* Call-to-action buttons */}
         <div className="flex gap-4 mb-32">
           {/* Resume button with icon */}
-          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={resume} target="_blank" rel="noopener noreferrer">
             <HoverBorderGradient
               animated={true}
               as="button"

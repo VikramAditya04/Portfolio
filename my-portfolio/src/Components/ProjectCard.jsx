@@ -135,15 +135,15 @@ const ProjectCard = ({
                     <div className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-2xl rounded-[30px] p-3 border border-white/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
                       <div className="relative rounded-[24px] overflow-hidden bg-gradient-to-br from-purple-900/20 to-pink-900/20">
                         {imageUrl ? (
-                          <div className="relative w-full h-full aspect-[5/3] overflow-hidden">
+                          <div className="relative w-full h-full aspect-[6/3] overflow-hidden">
                             <img
                               src={imageUrl}
                               alt={title}
-                              className="absolute inset-0 w-full h-full object-cover     overflow-hidden"
+                              className="absolute inset-0 w-full h-full object-cover overflow-hidden"
                             />
                           </div>
                         ) : (
-                          <div className="w-full aspect-[4/3] bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center">
+                          <div className="w-full aspect-[6/3] bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center">
                             <svg
                               className="w-32 h-32 text-white/20"
                               fill="none"

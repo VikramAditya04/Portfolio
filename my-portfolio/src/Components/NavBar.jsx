@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Home, User, Briefcase, Mail } from "lucide-react";
 import { HoverBorderGradient } from "../ui/HoverBorderGradient.jsx";
+import resume from '../assets/Resume/Resume.pdf';
 
 /**
  * Utility function to merge classnames
@@ -17,7 +18,7 @@ function cn(...args) {
     .join(" ");
 }
 
-export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "#" }) {
+export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = {resume} }) {
   const [activeTab, setActiveTab] = useState(items?.[0]?.name || "");
   const [isMobile, setIsMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -136,7 +137,7 @@ export function NavBar({ items = [], className = "", logoUrl = "", resumeUrl = "
         </div>
 
         {/* Resume Button */}
-        <a href={resumeUrl} className="hidden md:flex items-center justify-center cursor-pointer">
+        <a href={resume} target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center justify-center cursor-pointer">
           <HoverBorderGradient
             as="button"
             containerClassName="rounded-full cursor-pointer"

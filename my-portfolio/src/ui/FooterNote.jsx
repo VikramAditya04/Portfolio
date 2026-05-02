@@ -13,9 +13,10 @@ export default function FooterNote() {
 
   return (
     <div className="text-gray-400 text-sm flex items-center gap-2 pt-8">
-      <p>
-        Design & built by <span className="font-medium text-white">Vikram Aditya</span>
-      </p>
+    <p>
+      © Design & built by{" "}
+      <span className="font-medium text-white">Vikram Aditya</span>
+    </p>
 
       <span className="relative inline-block w-5 h-5">
         <span
@@ -26,7 +27,7 @@ export default function FooterNote() {
         </span>
       </span>
 
-      <span className="text-gray-300">· 2025</span>
+      <span className="text-gray-300">· {new Date().getFullYear()} </span>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import TiltedCard from '../ui/Cards/TiltedCard.jsx';
 import vikramImg from '../assets/Vikram.png';
 import FooterNote from '../ui/FooterNote.jsx';
 import logo from '../assets/Logo VA.png';
+import resume from '../assets/Resume/Resume.pdf';
 
 function Footer() {
   return (
@@ -42,7 +43,7 @@ function Footer() {
 
           {/* CTA BUTTONS */}
           <div className="flex gap-2 mb-10 md:mb-24 justify-center md:justify-end">
-            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={resume} target="_blank" rel="noopener noreferrer">
               <HoverBorderGradient
                 animated={true}
                 as="button"
